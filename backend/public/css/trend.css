@@ -1,0 +1,44 @@
+.post {
+	padding: 0 40px;
+}
+.post-trend {
+	margin-bottom: 15px;
+	padding-left: 10px;
+	font-size: 15px;
+	color: #444444;
+	text-align: left;
+}
+.post-trend span {
+	font-size: 12px;
+	color: #666666;
+	padding-left: 3px;
+}
+.post-item {
+	padding: 10px;
+}
+.post-user {
+	display: flex;
+}
+.post-con {
+	text-align: left;
+	padding-left: 10px;
+}
+.post-name {
+	font-size: 12px;
+}
+.post-date {
+	font-size: 1px;
+	color: #787c7B;
+}
+.post-text {
+	text-align: left;
+}
+.post-title {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333333;
+}
+
+hr {
+	margin: 10px 0;
+}

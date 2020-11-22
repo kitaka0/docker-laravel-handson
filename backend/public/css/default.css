@@ -1,0 +1,72 @@
+body {
+  font-family: 'Noto Serif JP', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: dimgray;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+
+/*header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 30px;
+}
+.logo {
+  width: 150px;
+  height: 100%;
+  padding: 10px 0;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.header-right {
+  display: flex;
+}
+
+.main {
+  display: flex;
+}
+
+
+.grovalNavigation{
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    color: #fff;
+}
+.groval-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.localNavigation{
+    flex: 1;
+    text-align: center;
+    background-color: white;
+    color: #fff;
+}
+
+.content{
+  width: 800px;
+}
+
+
+
+
+
+
