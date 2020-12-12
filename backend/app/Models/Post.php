@@ -9,6 +9,22 @@ class Post extends Model
 {
     use HasFactory;
 
+	/**
+     * リレーション（1対多）
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
+
+    /**
+     * リレーション（1対多）
+     */
+    public function photos()
+    {
+        return $this->hasMany('App\Models\PostPhotos');
+    }
+    
     /**
      * リレーション (従属)
      */

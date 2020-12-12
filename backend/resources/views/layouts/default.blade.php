@@ -12,6 +12,7 @@
   <!-- ICON -->
   <link rel="icon" type="image/x-icon" href="{{ asset('/img/icon.png') }}">
   <!-- CSS -->
+  @yield('css_before')
   <link rel="stylesheet" href="{{ asset('css/app2.css') }}">
   <link rel="stylesheet" href="{{ asset('/css/default.css') }}">
   @yield('css')
@@ -104,6 +105,5 @@
     @yield('localNavigation')
   </div>
 
-  
 </body>
 </html>

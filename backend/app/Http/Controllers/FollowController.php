@@ -15,13 +15,13 @@ class FollowController extends Controller
 		  $follow->user_id = Auth::id();
 		  $follow->follow_id = $request->follow_id;
 		  $follow->save();
-			return redirect(url('/users',$request->follow_id));
+			return redirect(url()->previous());
 		}
 
 		// Unfollow処理
 		public function unFollow(Request $request) {
 		  Follow::where('user_id',Auth::id())
 		  				->where('follow_id',$request->follow_id)->delete();
-		  return redirect(url('/users',$request->follow_id));
+		  return redirect(url()->previous());
 		}
 }

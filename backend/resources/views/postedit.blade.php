@@ -12,18 +12,17 @@
 
 <!-- メインコンテンツ -->
 @section('content')
-
-<form method="post" action="{{ route('postStore')}}" enctype="multipart/form-data">
+<form method="post" action="{{ route('postUpdate') }}" enctype="multipart/form-data">
   {{ csrf_field() }}
-  <input type="text" class="post_title" name="post_title" placeholder="記事のタイトル　例:マルバツゲームをpythonで作ってみた">
+  <input type="text" class="post_title" name="post_title" placeholder="記事のタイトル　例:マルバツゲームをpythonで作ってみた" value="{{ old('post_title' ,$post->post_title)}}">
   @error('post_title')
     <div class="alert alert-danger">{{ $message }}</div>
 	@enderror
-  <input type="text" class="product_title" name="product_title" placeholder="成果物のタイトル　例:マルバツゲーム">
+  <input type="text" class="product_title" name="product_title" placeholder="成果物のタイトル　例:マルバツゲーム" value="{{ old('product_title' ,$post->product_title)}}">
   @error('product_title')
     <div class="alert alert-danger">{{ $message }}</div>
 	@enderror
-  <input type="text" class="url" name="url" placeholder="成果物のurl (任意)">
+  <input type="text" class="url" name="url" placeholder="成果物のurl (任意)" value="{{ old('url' ,$post->url)}}">
 
   <div class="view_box_main">
     <div class="img_view_main">
@@ -39,17 +38,18 @@
       </div>
     </div>
   </div>
-
-  <textarea class="detail" name="detail" placeholder="工夫点や動機など好きなことを書こう"></textarea>
+  
+  <textarea class="detail" name="detail" placeholder="工夫点や動機など好きなことを書こう">{{ old('detail' ,$post->detail)}}</textarea>
+  <input type="hidden" name="post_id" value="{{$post->id}}">
   <button type="submit" class="btn btn-info post-btn">投稿</button>
 </form>
 
-  <script>
+<script>
     $('.slider').slick({
       arrows:true,
       dots:true,
       infinite: false,
     });
   </script>
-
+  
 @endsection

@@ -1,3 +1,47 @@
 .content {
 	width: 100%;
 }
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.post_title, .product_title, .url, .detail {
+	border: solid 1px lightgray;
+	margin: 5px;
+	padding-left: 10px;
+}
+.post_title {
+	height: 50px;
+	font-size: 25px;
+}
+.product_title {
+	height: 30px;
+	font-size: 18px;
+}
+.detail {
+	min-height: 200px;
+}
+
+.img_view_main {
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+}
+.img_input {
+	display: flex;
+	justify-content: center;
+}
+.view_box_small {
+	width: 200px;
+}
+.img_view_small {
+	width: 200px;
+}
+
+.post-btn {
+	width: 80px;
+	margin: 0 0 0 auto;
+	margin-right: 10px;
+}

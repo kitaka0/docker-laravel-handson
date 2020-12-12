@@ -13,7 +13,7 @@
 <!-- メインコンテンツ -->
 @section('content')
 <section class="post">
-  <p class="post-trend">トレンド<span>人気の記事一覧<span></p>
+  <p class="post-trend">ランキング<span>人気の記事一覧<span></p>
   @forelse($posts as $post)
   <div class="post-item">
     <div class="post-user">
@@ -32,7 +32,8 @@
       </div>
     </div>
     <div class="post-text">
-      <a class="post-title" href="{{ url('/posts',$post->post_id) }}">{{$post->post_title}}</a>
+      <h1>いいね：{{$post->like_count}}</h1>
+      <a class="post-title" href="{{ route('postDetail',['post_id'=>$post->post_id]) }}">{{$post->post_title}}</a>
       <p>制作物:{{$post->product_title}}</p>
       <p>URL:{{$post->url}}</p>
       <p>{!! nl2br(e($post->detail)) !!}</p>

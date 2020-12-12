@@ -6,7 +6,7 @@
 }
 
 .post-item {
-	width: 800px;
+	width: 700px;
 	margin: 0 auto;
 }
 .post-user {
@@ -26,3 +26,20 @@
 .post-text {
 	text-align: left;
 }
+
+.post-user-dropdown {
+	display: flex;
+}
+.post-dropdown {
+	margin: 0 0 0 auto;
+}
+.dropdown-menu {
+	min-width: 20px;
+}
+.dropdown-item {
+	font-size: 13px;
+}
+
+
+
+

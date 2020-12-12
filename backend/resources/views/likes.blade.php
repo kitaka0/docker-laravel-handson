@@ -7,24 +7,23 @@
 
 <!-- メインコンテンツ -->
 @section('profile_under')
-
-<section class="post">
-  <p>投稿一覧</p>
-  @forelse($posts as $post)
-  <div class="post-item">
-    <dic class="post-user">
+<section class="like">
+  <p>いいね一覧</p>
+  @forelse($likes as $like)
+  <div class="like-item">
+    <dic class="like-user">
       <div class="user-img">
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
         <img class="rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
         @endif
       </div>
       <div class="">
-        <div>{{ $post->user_id }}</div>
-        <div>{{$post->created_at}}</div>
+        <div>{{ $like->user_id }}</div>
+        <div>{{$like->created_at}}</div>
       </div>
     </dic>
-    <a href="{{ url('/posts',$post->id) }}">{{$post->title}}</a>
-    <p><{{$post->detail}}</p>
+    <a href="{{ url('/posts',$like->id) }}">{{$like->title}}</a>
+    <p><{{$like->detail}}</p>
   </div>
   @empty
     Nothing
